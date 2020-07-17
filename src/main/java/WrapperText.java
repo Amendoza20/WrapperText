@@ -9,6 +9,10 @@ public class WrapperText {
 
             List<String> words = splitString(inputText);
 
+            if (words.isEmpty()) {
+                throw new NullPointerException();
+            }
+
             int lineLength = 0;
             StringBuilder builder = new StringBuilder();
             for (String word : words) {
